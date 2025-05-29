@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinarioSQLite.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#8B5CF6</Color>
+            <Color x:Key="PrimaryDark">#7C3AED</Color>
+            <Color x:Key="PrimaryLight">#A78BFA</Color>
+            <Color x:Key="Secondary">#C084FC</Color>
+            <Color x:Key="Accent">#DDD6FE</Color>
+            <Color x:Key="Background">#F8FAFC</Color>
+            <Color x:Key="Surface">#FFFFFF</Color>
+            <Color x:Key="Error">#EF4444</Color>
+            <Color x:Key="OnPrimary">#FFFFFF</Color>
+            <Color x:Key="OnSurface">#1F2937</Color>
+            <Color x:Key="OnBackground">#374151</Color>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="TextColor" Value="{StaticResource OnPrimary}" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="16,12" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{StaticResource Surface}" />
+                <Setter Property="TextColor" Value="{StaticResource OnSurface}" />
+                <Setter Property="PlaceholderColor" Value="#9CA3AF" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="TitleStyle">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource Primary}" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="SubtitleStyle">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+            </Style>
+
+            <Style TargetType="Frame" x:Key="CardStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource Surface}" />
+                <Setter Property="CornerRadius" Value="12" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Margin" Value="8" />
+            </Style>
+
+            <Style TargetType="Shell" ApplyToDerivedTypes="True">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.NavBarHasShadow" Value="False" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
+                <Setter Property="Shell.TabBarTitleColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

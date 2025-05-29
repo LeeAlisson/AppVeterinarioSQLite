@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Primary">#8B5CF6</color>
+    <color name="PrimaryDark">#7C3AED</color>
+    <color name="PrimaryDarkTint">#A78BFA</color>
+    <color name="Secondary">#C084FC</color>
+    <color name="SecondaryDarkTint">#DDD6FE</color>
+    <color name="Tertiary">#2dd4bf</color>
+    <color name="White">White</color>
+    <color name="Black">Black</color>
+    <color name="Magenta">#D600AA</color>
+    <color name="MidnightBlue">#190649</color>
+    <color name="OffBlack">#1f1f1f</color>
+</resources>

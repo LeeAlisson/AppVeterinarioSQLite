@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="456" viewBox="0 0 456 456">
+	<rect width="456" height="456" fill="#8B5CF6"/>
+	<circle cx="228" cy="228" r="180" fill="#9D6DF7" opacity="0.6"/>
+	<g transform="translate(128, 80) scale(8.5)" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M13 16a3 3 0 0 1 2.24 5"/>
+		<path d="M18 12h.01"/>
+		<path d="M18 21h-8a4 4 0 0 1-4-4 7 7 0 0 1 7-7h.2L9.6 6.4a1 1 0 1 1 2.8-2.8L15.8 7h.2c3.3 0 6 2.7 6 6v1a2 2 0 0 1-2 2h-1a3 3 0 0 0-3 3"/>
+		<path d="M20 8.54V4a2 2 0 1 0-4 0v3"/>
+		<path d="M7.612 12.524a3 3 0 1 0-1.6 4.3"/>
+	</g>
+	<text x="228" y="320" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">My Little Friend</text>
+	<text x="228" y="350" font-family="Arial, sans-serif" font-size="18" fill="#DDD6FE" text-anchor="middle">Gestão Completa de Clínica</text>
+	<circle cx="120" cy="120" r="8" fill="white" opacity="0.6"/>
+	<circle cx="336" cy="140" r="6" fill="white" opacity="0.6"/>
+	<circle cx="160" cy="380" r="5" fill="white" opacity="0.6"/>
+	<circle cx="300" cy="360" r="7" fill="white" opacity="0.6"/>
+	<circle cx="208" cy="380" r="5" fill="white"/>
+	<circle cx="228" cy="380" r="5" fill="white"/>
+	<circle cx="248" cy="380" r="5" fill="white"/>
+</svg>

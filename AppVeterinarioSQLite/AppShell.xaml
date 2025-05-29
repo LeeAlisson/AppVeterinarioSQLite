@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AppVeterinarioSQLite.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AppVeterinarioSQLite.Views"
+    Title="Sistema Veterinário"
+    BackgroundColor="{StaticResource Primary}"
+    ForegroundColor="White"
+    TitleColor="White"
+    FlyoutBackgroundColor="{StaticResource Primary}">
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="{StaticResource Secondary}" HeightRequest="200">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Border Stroke="{StaticResource Surface}"
+                        StrokeShape="RoundRectangle 20"
+                        Margin="5"
+                        Padding="10">
+                    <Image Source="rabbit.svg" 
+                           HeightRequest="50" />
+                </Border>
+
+                <Label Text="My Little Friend"
+                       FontSize="22" 
+                       FontAttributes="Bold" 
+                       TextColor="{StaticResource Surface}" 
+                       HorizontalOptions="Center"/>
+                <Label Text="Gestão Completa de Clínica" 
+                       FontSize="14" 
+                       TextColor="{StaticResource Surface}" 
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Dashboard" Icon="house.svg" FlyoutItemIsVisible="True">
+        <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Espécies" Icon="pets.svg" FlyoutItemIsVisible="True">
+        <ShellContent Title="Espécies" ContentTemplate="{DataTemplate local:EspeciesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Animais" Icon="dog.svg" FlyoutItemIsVisible="True">
+        <ShellContent Title="Animais" ContentTemplate="{DataTemplate local:AnimaisPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Clientes" Icon="users.svg" FlyoutItemIsVisible="True">
+        <ShellContent Title="Clientes" ContentTemplate="{DataTemplate local:ClientesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Vínculos" Icon="link.svg" FlyoutItemIsVisible="True">
+        <ShellContent Title="Vínculos" ContentTemplate="{DataTemplate local:VinculosPage}" />
+    </FlyoutItem>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="Auto,*" 
+                  Padding="25,15,20,15" 
+                  RowSpacing="0" 
+                  ColumnSpacing="20">
+                <Image Source="{Binding Icon}"
+                       Grid.Column="0"
+                       HeightRequest="28" 
+                       WidthRequest="28"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"/>
+                <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="17"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <Shell.FlyoutFooter>
+        <Grid BackgroundColor="{StaticResource Primary}" Padding="20">
+            <StackLayout>
+                <Label Text="Alisson Lee Martins" 
+                       FontSize="14" 
+                       FontAttributes="Bold"
+                       TextColor="White" 
+                       HorizontalOptions="Center"/>
+                <Label Text="RA: 2402946" 
+                       FontSize="12" 
+                       TextColor="{StaticResource Accent}"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+    </Shell.FlyoutFooter>
+
+</Shell>

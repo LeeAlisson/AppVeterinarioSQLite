@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinarioSQLite.Views.EspecieDetalhesPage"
+             Title="Detalhes da Espécie"
+             BackgroundColor="{StaticResource Background}">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label x:Name="lblTitulo" 
+                   Text="Nova Espécie" 
+                   Style="{StaticResource TitleStyle}" 
+                   HorizontalOptions="Center"/>
+
+            <Frame Style="{StaticResource CardStyle}">
+                <StackLayout Spacing="15">
+
+                    <StackLayout x:Name="containerID" IsVisible="False">
+                        <Label Text="ID:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Entry x:Name="entryID" IsReadOnly="True" IsEnabled="False"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Nome da Espécie:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Frame Padding="0" BorderColor="{StaticResource Primary}" CornerRadius="5" HasShadow="False">
+                            <Entry x:Name="entryNome" 
+                                   Placeholder="Ex: Cachorro, Gato, Pássaro..." 
+                                   Margin="10,0"/>
+                        </Frame>
+                        <Label x:Name="lblErroNome" 
+                               Text="Nome é obrigatório" 
+                               TextColor="{StaticResource Error}" 
+                               FontSize="12" 
+                               IsVisible="False"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                        <Button x:Name="btnSalvar" 
+                                Text="Salvar" 
+                                BackgroundColor="{StaticResource Primary}"
+                                WidthRequest="80"
+                                Clicked="OnSalvarClicked"/>
+
+                        <Button x:Name="btnCancelar" 
+                                Text="Voltar" 
+                                BackgroundColor="#6B7280"
+                                WidthRequest="80"
+                                Clicked="OnCancelarClicked"/>
+
+                        <Button x:Name="btnExcluir" 
+                                Text="🗑️ Excluir" 
+                                BackgroundColor="{StaticResource Error}"
+                                WidthRequest="80"
+                                IsVisible="False"
+                                Clicked="OnExcluirClicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame x:Name="frameAnimais" Style="{StaticResource CardStyle}" IsVisible="False">
+                <StackLayout>
+                    <Label Text="Animais desta Espécie" 
+                           Style="{StaticResource SubtitleStyle}"/>
+
+                    <CollectionView x:Name="collectionViewAnimais" 
+                                    HeightRequest="200"
+                                    EmptyView="Nenhum animal cadastrado para esta espécie.">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="0,5" Padding="10" CornerRadius="8" HasShadow="False" BorderColor="{StaticResource Accent}">
+                                    <Grid ColumnDefinitions="Auto,*">
+                                        <Label Text="🐾" 
+                                               FontSize="20" 
+                                               VerticalOptions="Center"
+                                               Grid.Column="0"/>
+
+                                        <StackLayout Grid.Column="1" Margin="10,0,0,0">
+                                            <Label Text="{Binding Nome}" 
+                                                   FontSize="16" 
+                                                   FontAttributes="Bold"
+                                                   TextColor="{StaticResource Primary}"/>
+                                            <Label Text="{Binding Apelido}" 
+                                                   FontSize="12" 
+                                                   TextColor="{StaticResource OnBackground}"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

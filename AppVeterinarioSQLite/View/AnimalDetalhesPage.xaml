@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinarioSQLite.Views.AnimalDetalhesPage"
+             Title="Detalhes do Animal"
+             BackgroundColor="{StaticResource Background}">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label x:Name="lblTitulo" 
+                   Text="Novo Animal" 
+                   Style="{StaticResource TitleStyle}" 
+                   HorizontalOptions="Center"/>
+
+            <Frame Style="{StaticResource CardStyle}">
+                <StackLayout Spacing="15">
+
+                    <StackLayout x:Name="containerID" IsVisible="False">
+                        <Label Text="ID:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Entry x:Name="entryID" IsReadOnly="True" IsEnabled="False"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Nome:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Frame Padding="0" BorderColor="{StaticResource Primary}" CornerRadius="5" HasShadow="False">
+                            <Entry x:Name="entryNome" 
+                                   Placeholder="Nome do animal" 
+                                   Margin="10,0"/>
+                        </Frame>
+                        <Label x:Name="lblErroNome" 
+                               Text="Nome é obrigatório" 
+                               TextColor="{StaticResource Error}" 
+                               FontSize="12" 
+                               IsVisible="False"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Apelido:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Frame Padding="0" BorderColor="{StaticResource Primary}" CornerRadius="5" HasShadow="False">
+                            <Entry x:Name="entryApelido" 
+                                   Placeholder="Apelido do animal" 
+                                   Margin="10,0"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Data de Nascimento:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <DatePicker x:Name="datePickerNascimento" Format="dd/MM/yyyy"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Espécie:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Frame Padding="0" BorderColor="{StaticResource Primary}" CornerRadius="5" HasShadow="False">
+                            <Picker x:Name="pickerEspecie" 
+                                    Title="Selecione a espécie" 
+                                    Margin="10,0"/>
+                        </Frame>
+                        <Label x:Name="lblErroEspecie" 
+                               Text="Espécie é obrigatória" 
+                               TextColor="{StaticResource Error}" 
+                               FontSize="12" 
+                               IsVisible="False"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Observações:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Frame Padding="0" BorderColor="{StaticResource Primary}" CornerRadius="5" HasShadow="False">
+                            <Editor x:Name="editorObservacoes" 
+                                    Placeholder="Observações sobre o animal" 
+                                    HeightRequest="100"
+                                    Margin="10,0"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                        <Button x:Name="btnSalvar" 
+                                Text="Salvar" 
+                                BackgroundColor="{StaticResource Primary}"
+                                WidthRequest="80"
+                                Clicked="OnSalvarClicked"/>
+
+                        <Button x:Name="btnCancelar" 
+                                Text="Voltar"
+                                BackgroundColor="#6B7280"
+                                WidthRequest="80"
+                                Clicked="OnCancelarClicked"/>
+
+                        <Button x:Name="btnExcluir" 
+                                Text="🗑️ Excluir" 
+                                BackgroundColor="{StaticResource Error}"
+                                WidthRequest="80"
+                                IsVisible="False"
+                                Clicked="OnExcluirClicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

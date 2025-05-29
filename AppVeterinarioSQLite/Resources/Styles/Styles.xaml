@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Estilos para Labels -->
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightOnBackground}, Dark={StaticResource DarkOnBackground}}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style x:Key="PageTitleStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="FontFamily" Value="OpenSansSemiBold" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+    </Style>
+
+    <Style x:Key="SectionTitleStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="FontFamily" Value="OpenSansSemiBold" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Margin" Value="0,16,0,8" />
+    </Style>
+
+    <Style x:Key="FormLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray700}, Dark={StaticResource Gray300}}" />
+        <Setter Property="FontFamily" Value="OpenSansSemiBold" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Margin" Value="0,0,0,4" />
+    </Style>
+
+    <!-- Estilos para Entries -->
+    <Style TargetType="Entry">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightOnSurface}, Dark={StaticResource DarkOnSurface}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightSurface}, Dark={StaticResource DarkSurface}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray600}}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+    </Style>
+
+    <!-- Estilos para DatePicker -->
+    <Style TargetType="DatePicker">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightOnSurface}, Dark={StaticResource DarkOnSurface}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightSurface}, Dark={StaticResource DarkSurface}}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+    </Style>
+
+    <!-- Estilos para Editor -->
+    <Style TargetType="Editor">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightOnSurface}, Dark={StaticResource DarkOnSurface}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightSurface}, Dark={StaticResource DarkSurface}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray600}}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+        <Setter Property="AutoSize" Value="TextChanges" />
+    </Style>
+
+    <!-- Estilos para Picker -->
+    <Style TargetType="Picker">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightOnSurface}, Dark={StaticResource DarkOnSurface}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightSurface}, Dark={StaticResource DarkSurface}}" />
+        <Setter Property="TitleColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+    </Style>
+
+    <!-- Estilos para Buttons -->
+    <Style TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="FontFamily" Value="OpenSansSemiBold" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="14,10" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+        <Setter Property="MinimumWidthRequest" Value="44" />
+    </Style>
+
+    <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="FontFamily" Value="OpenSansSemiBold" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="14,10" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+        <Setter Property="MinimumWidthRequest" Value="44" />
+    </Style>
+
+    <Style x:Key="IconButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="WidthRequest" Value="44" />
+        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="CornerRadius" Value="22" />
+    </Style>
+
+    <!-- Estilos para ContentPage -->
+    <Style TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" />
+    </Style>
+
+    <!-- Estilos para Frame -->
+    <Style TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightSurface}, Dark={StaticResource DarkSurface}}" />
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="HasShadow" Value="{OnPlatform iOS=false, MacCatalyst=false, Default=true}" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+    </Style>
+
+    <!-- Estilos para ListView -->
+    <Style TargetType="ListView">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="SeparatorColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="SeparatorVisibility" Value="Default" />
+        <Setter Property="HasUnevenRows" Value="True" />
+        <Setter Property="SelectionMode" Value="Single" />
+    </Style>
+
+    <!-- Estilos para CollectionView -->
+    <Style TargetType="CollectionView">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="SelectionMode" Value="Single" />
+    </Style>
+
+    <!-- Estilos para SearchBar -->
+    <Style TargetType="SearchBar">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightOnSurface}, Dark={StaticResource DarkOnSurface}}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray600}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightSurface}, Dark={StaticResource DarkSurface}}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Margin" Value="0,0,0,16" />
+    </Style>
+
+    <!-- Estilos para RefreshView -->
+    <Style TargetType="RefreshView">
+        <Setter Property="RefreshColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+    </Style>
+
+    <!-- Estilos para ActivityIndicator -->
+    <Style TargetType="ActivityIndicator">
+        <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+    </Style>
+
+    <!-- Estilos para Switch -->
+    <Style TargetType="Switch">
+        <Setter Property="OnColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="ThumbColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
+    </Style>
+
+    <!-- Estilos para ProgressBar -->
+    <Style TargetType="ProgressBar">
+        <Setter Property="ProgressColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+    </Style>
+
+    <!-- Estilos para Slider -->
+    <Style TargetType="Slider">
+        <Setter Property="MinimumTrackColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="MaximumTrackColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray700}}" />
+        <Setter Property="ThumbColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryLight}}" />
+    </Style>
+</ResourceDictionary>

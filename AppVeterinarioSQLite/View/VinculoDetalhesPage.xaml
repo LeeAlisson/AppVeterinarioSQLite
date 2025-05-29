@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinarioSQLite.Views.VinculoDetalhesPage"
+             Title="Novo Vínculo"
+             BackgroundColor="{StaticResource Background}">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label Text="Criar Novo Vínculo" 
+                   Style="{StaticResource TitleStyle}" 
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Vincule um cliente a um animal" 
+                   FontSize="16" 
+                   TextColor="{StaticResource OnBackground}" 
+                   HorizontalOptions="Center"/>
+
+            <Frame Style="{StaticResource CardStyle}">
+                <StackLayout Spacing="20">
+
+                    <StackLayout>
+                        <Label Text="Cliente:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Frame Padding="0" BorderColor="{StaticResource Primary}" CornerRadius="5" HasShadow="False">
+                            <Picker x:Name="pickerCliente" 
+                                    Title="Selecione o cliente" 
+                                    Margin="10,0"/>
+                        </Frame>
+                        <Label x:Name="lblErroCliente" 
+                               Text="Cliente é obrigatório" 
+                               TextColor="{StaticResource Error}" 
+                               FontSize="12" 
+                               IsVisible="False"/>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Animal:" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                        <Frame Padding="0" BorderColor="{StaticResource Primary}" CornerRadius="5" HasShadow="False">
+                            <Picker x:Name="pickerAnimal" 
+                                    Title="Selecione o animal" 
+                                    Margin="10,0"/>
+                        </Frame>
+                        <Label x:Name="lblErroAnimal" 
+                               Text="Animal é obrigatório" 
+                               TextColor="{StaticResource Error}" 
+                               FontSize="12" 
+                               IsVisible="False"/>
+                    </StackLayout>
+
+                    <Frame BackgroundColor="{StaticResource Accent}" Padding="15" CornerRadius="8">
+                        <StackLayout>
+                            <Label Text="ℹ️ Informação" 
+                                   FontAttributes="Bold" 
+                                   TextColor="{StaticResource Primary}"/>
+                            <Label Text="Este vínculo permitirá que o cliente seja responsável pelo animal selecionado. Um animal pode ter múltiplos responsáveis." 
+                                   FontSize="14" 
+                                   TextColor="{StaticResource Primary}"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                        <Button x:Name="btnSalvar" 
+                                Text="Criar Vínculo" 
+                                BackgroundColor="{StaticResource Primary}"
+                                WidthRequest="140"
+                                Clicked="OnSalvarClicked"/>
+
+                        <Button x:Name="btnCancelar" 
+                                Text="Voltar"
+                                BackgroundColor="#6B7280"
+                                WidthRequest="120"
+                                Clicked="OnCancelarClicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinarioSQLite.Views.MainPage"
+             Title="Dashboard"
+             BackgroundColor="{StaticResource Background}">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Frame Style="{StaticResource CardStyle}" BackgroundColor="{StaticResource Primary}">
+                <StackLayout>
+                    <Label Text="Bem-vindo ao My Little Friend!" 
+                           Style="{StaticResource TitleStyle}" 
+                           TextColor="White" 
+                           HorizontalOptions="Center"/>
+                    <Label Text="Gerencie espécies, animais, clientes e vínculos" 
+                           FontSize="16" 
+                           TextColor="{StaticResource Accent}" 
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" ColumnSpacing="10" RowSpacing="10">
+
+                <Frame Grid.Row="0" Grid.Column="0" Style="{StaticResource CardStyle}">
+                    <StackLayout>
+                        <Label Text="🦎" FontSize="30" HorizontalOptions="Center"/>
+                        <Label x:Name="lblTotalEspecies" Text="0" 
+                               FontSize="24" FontAttributes="Bold" 
+                               TextColor="{StaticResource Primary}" 
+                               HorizontalOptions="Center"/>
+                        <Label Text="Espécies" FontSize="14" 
+                               TextColor="{StaticResource OnBackground}" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="0" Grid.Column="1" Style="{StaticResource CardStyle}">
+                    <StackLayout>
+                        <Label Text="🐕" FontSize="30" HorizontalOptions="Center"/>
+                        <Label x:Name="lblTotalAnimais" Text="0" 
+                               FontSize="24" FontAttributes="Bold" 
+                               TextColor="{StaticResource Primary}" 
+                               HorizontalOptions="Center"/>
+                        <Label Text="Animais" FontSize="14" 
+                               TextColor="{StaticResource OnBackground}" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="0" Style="{StaticResource CardStyle}">
+                    <StackLayout>
+                        <Label Text="👥" FontSize="30" HorizontalOptions="Center"/>
+                        <Label x:Name="lblTotalClientes" Text="0" 
+                               FontSize="24" FontAttributes="Bold" 
+                               TextColor="{StaticResource Primary}" 
+                               HorizontalOptions="Center"/>
+                        <Label Text="Clientes" FontSize="14" 
+                               TextColor="{StaticResource OnBackground}" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="1" Style="{StaticResource CardStyle}">
+                    <StackLayout>
+                        <Label Text="🔗" FontSize="30" HorizontalOptions="Center"/>
+                        <Label x:Name="lblTotalVinculos" Text="0" 
+                               FontSize="24" FontAttributes="Bold" 
+                               TextColor="{StaticResource Primary}" 
+                               HorizontalOptions="Center"/>
+                        <Label Text="Vínculos" FontSize="14" 
+                               TextColor="{StaticResource OnBackground}" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+
+            <Frame Style="{StaticResource CardStyle}">
+                <StackLayout>
+                    <Label Text="Ações Rápidas" Style="{StaticResource SubtitleStyle}"/>
+
+                    <Button Text="➕ Nova Espécie" 
+                            BackgroundColor="{StaticResource Secondary}"
+                            Clicked="OnNovaEspecieClicked"
+                            Margin="5" />
+
+                    <Button Text="🐾 Novo Animal" 
+                            BackgroundColor="{StaticResource Secondary}"
+                            Clicked="OnNovoAnimalClicked"
+                            Margin="5" />
+
+                    <Button Text="👤 Novo Cliente" 
+                            BackgroundColor="{StaticResource Secondary}"
+                            Clicked="OnNovoClienteClicked"
+                            Margin="5" />
+
+                    <Button Text="🔗 Novo Vínculo" 
+                            BackgroundColor="{StaticResource Secondary}"
+                            Clicked="OnNovoVinculoClicked"
+                            Margin="5" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
