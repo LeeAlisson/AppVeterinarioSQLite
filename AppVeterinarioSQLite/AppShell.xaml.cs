@@ -10,5 +10,15 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("animais/detalhes", typeof(Views.AnimalDetalhesPage));
         Routing.RegisterRoute("clientes/detalhes", typeof(Views.ClienteDetalhesPage));
         Routing.RegisterRoute("vinculos/detalhes", typeof(Views.VinculoDetalhesPage));
+
+        this.Navigated += OnShellNavigated;
+    }
+
+    private void OnShellNavigated(object sender, ShellNavigatedEventArgs e)
+    {
+        if (FlyoutIsPresented)
+        {
+            FlyoutIsPresented = false;
+        }
     }
 }

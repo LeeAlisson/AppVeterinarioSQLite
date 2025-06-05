@@ -8,7 +8,8 @@
     BackgroundColor="{StaticResource Primary}"
     ForegroundColor="White"
     TitleColor="White"
-    FlyoutBackgroundColor="{StaticResource Primary}">
+    FlyoutBackgroundColor="{StaticResource Primary}"
+    Shell.FlyoutBehavior="Flyout">
 
     <Shell.FlyoutHeader>
         <Grid BackgroundColor="{StaticResource Secondary}" HeightRequest="200">
@@ -34,24 +35,46 @@
         </Grid>
     </Shell.FlyoutHeader>
 
+    <TabBar>
+        <Tab Title="Dashboard" Icon="house.svg" Route="dashboard">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+
+        <Tab Title="Espécies" Icon="pets.svg" Route="especies">
+            <ShellContent ContentTemplate="{DataTemplate local:EspeciesPage}" />
+        </Tab>
+
+        <Tab Title="Animais" Icon="dog.svg" Route="animais">
+            <ShellContent ContentTemplate="{DataTemplate local:AnimaisPage}" />
+        </Tab>
+
+        <Tab Title="Clientes" Icon="users.svg" Route="clientes">
+            <ShellContent ContentTemplate="{DataTemplate local:ClientesPage}" />
+        </Tab>
+
+        <Tab Title="Vínculos" Icon="link.svg" Route="vinculos">
+            <ShellContent ContentTemplate="{DataTemplate local:VinculosPage}" />
+        </Tab>
+    </TabBar>
+
     <FlyoutItem Title="Dashboard" Icon="house.svg" FlyoutItemIsVisible="True">
-        <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate local:MainPage}" Route="dashboard" />
     </FlyoutItem>
 
     <FlyoutItem Title="Espécies" Icon="pets.svg" FlyoutItemIsVisible="True">
-        <ShellContent Title="Espécies" ContentTemplate="{DataTemplate local:EspeciesPage}" />
+        <ShellContent Title="Espécies" ContentTemplate="{DataTemplate local:EspeciesPage}" Route="especies" />
     </FlyoutItem>
 
     <FlyoutItem Title="Animais" Icon="dog.svg" FlyoutItemIsVisible="True">
-        <ShellContent Title="Animais" ContentTemplate="{DataTemplate local:AnimaisPage}" />
+        <ShellContent Title="Animais" ContentTemplate="{DataTemplate local:AnimaisPage}" Route="animais" />
     </FlyoutItem>
 
     <FlyoutItem Title="Clientes" Icon="users.svg" FlyoutItemIsVisible="True">
-        <ShellContent Title="Clientes" ContentTemplate="{DataTemplate local:ClientesPage}" />
+        <ShellContent Title="Clientes" ContentTemplate="{DataTemplate local:ClientesPage}" Route="clientes" />
     </FlyoutItem>
 
     <FlyoutItem Title="Vínculos" Icon="link.svg" FlyoutItemIsVisible="True">
-        <ShellContent Title="Vínculos" ContentTemplate="{DataTemplate local:VinculosPage}" />
+        <ShellContent Title="Vínculos" ContentTemplate="{DataTemplate local:VinculosPage}" Route="vinculos" />
     </FlyoutItem>
 
     <Shell.ItemTemplate>
